@@ -6,6 +6,8 @@ metadata:
   name: thanos-query
   namespace: thanos
 spec:
+  selector:
+    app: thanos-query
   ports:
   - name: grpc
     port: 10901
