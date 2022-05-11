@@ -7,4 +7,5 @@ resources:
   - namespace.yaml
   - install.yaml
   - argocd-app.yaml
+  - argocd-applications.yaml
   - sealed-secrets.yaml
