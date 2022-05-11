@@ -15,6 +15,14 @@ The `argocd-bootstrap` folder contains the basics to:
 - Setup SealedSecrets
 - Setup ArgoCD as an ArgoCD application itself (self setup)
 
+ArgoCD can be accessed by doing:
+```
+kubectl port-forward -n argocd svc/argocd-server 8080:443
+```
+and then you can visit http://localhost:8080
+
+By default, and due to the fact it's still localhost, you get admin access
+
 ![ArgoCD Setup](doc-images/argocd-setup.png)
 
 ## Folder structure
@@ -47,3 +55,5 @@ The `argocd-bootstrap` folder contains the basics to:
     - Possibly implement minio for objectstore offering
     - ^ Adding Thanos Store
     - Create some "homepage" with more information on how to use it + reference to the Cloud sponsor (Civo cloud)
+    - Add ingress to ArgoCD
+    - Add RBAC model to ArgoCD
