@@ -15,7 +15,7 @@ spec:
   source:
     repoURL: https://github.com/thanos-io/thanos-community-website
     targetRevision: feature/init-argocd
-    path: argocd-bootstrap/overlays/prd
+    path: argocd-bootstrap/overlays/production
 
   # Destination cluster and namespace to deploy the application
   destination:
