@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: thanos-query
+  name: thanos-query
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: thanos-query
+  template:
+    metadata:
+      labels:
+        app: thanos-query
+    spec:
+      containers:
+      - args:
+        - query
+        - --grpc-address=0.0.0.0:10901
+        - --http-address=0.0.0.0:9090
+        image: quay.io/thanos/thanos
+        imagePullPolicy: IfNotPresent
+        name: thanos-query
+        ports:
+        - containerPort: 10901
+          name: grpc
+        - containerPort: 9090
+          name: http
+          protocol: TCP
