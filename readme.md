@@ -8,6 +8,8 @@ At the moment we are setting up the base for the project. We are absolutely open
 
 ## CI/CD setup
 
+![ArgoCD Setup](doc-images/argocd-setup.png)
+
 We are using ArgoCD to deploy this project. ArgoCD is setup in a way that it is self managed.
 
 The `argocd-bootstrap` folder contains the basics to:
@@ -23,7 +25,7 @@ and then you can visit http://localhost:8080
 
 By default, and due to the fact it's still localhost, you get admin access
 
-![ArgoCD Setup](doc-images/argocd-setup.png)
+![ArgoCD UI](doc-images/argocd-ui.png)
 
 ## Folder structure
 
