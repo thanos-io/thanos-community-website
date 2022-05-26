@@ -14,7 +14,7 @@ spec:
   # Source of the application manifests
   source:
     repoURL: https://github.com/thanos-io/thanos-community-website
-    targetRevision: feature/init-argocd
+    targetRevision: main
     path: argocd-applications
     directory:
       recurse: true

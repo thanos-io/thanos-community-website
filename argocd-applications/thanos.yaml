@@ -14,7 +14,7 @@ spec:
   # Source of the application manifests
   source:
     repoURL: https://github.com/thanos-io/thanos-community-website
-    targetRevision: feature/init-argocd
+    targetRevision: main
     path: applications/thanos/overlays/production
 
   # Destination cluster and namespace to deploy the application
