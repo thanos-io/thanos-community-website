@@ -36,14 +36,14 @@ export default function Navbar() {
                         <Link style={{ marginRight: '1rem' }} href="https://thanos.io/tip/thanos/getting-started.md/"><Typography variant='h6' style={{ color: 'white' }}> Docs </Typography> </Link>
                         <Link style={{ marginRight: '1rem' }}
                             href="https://github.com/thanos-io/thanos">
-                            <div style={{ display: 'flex', alignItems: 'center' }}>
+                            <div style={{ display: 'flex',justifyContent:'center' }}>
                                 <GitHubIcon style={{ color: 'white',marginRight: '0.3rem' }} />
                                 <Typography variant='h6' style={{ color: 'white' }}> Github
                                 </Typography>
                             </div>
                         </Link>
                         <Link style={{ marginRight: '1rem' }} href="https://twitter.com/ThanosMetrics">
-                            <div style={{ display: 'flex', alignItems: 'center' }}>
+                            <div style={{ display: 'flex', justifyContent: 'center' }}>
                                 <TwitterIcon style={{ color: 'white', marginRight: '0.3rem' }}/>
                                 <Typography variant='h6' style={{ color: 'white' }}> Twitter </Typography> 
                                 </div>
