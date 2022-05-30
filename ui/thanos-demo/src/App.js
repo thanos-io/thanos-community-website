@@ -12,7 +12,7 @@ function App() {
     <div className="App">
       <Navbar />
       <Banner />
-      <div style={{display:'flex'}}>
+      <div className="wrapping">
       {
         cutletArray.map((item,index) => {
           return <Cutlet key={index} image={item.image} text={item.text} imageName={item.imageName} />

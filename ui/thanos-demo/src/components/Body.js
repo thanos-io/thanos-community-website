@@ -2,7 +2,7 @@ import { Button, Typography } from "@mui/material";
 
 function Body() {
     return (
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '2rem' }}>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '2rem',flexWrap:'wrap' }}>
             <div className='card'>
                 <Typography variant='h4' style={{ margin: '2.5rem 3rem', fontWeight: '700' }}>Thanos Querier</Typography>
                 <div style={{ display: 'flex', alignItems: 'center' }}>
