@@ -4,6 +4,7 @@ import Banner from './components/Banner';
 import Cutlet from './components/Cutlet';
 import {cutletArray} from './utilities/CutletText'
 import './App.css'
+import Body from './components/Body';
 function App() {
   console.log(cutletArray)
   return (
@@ -17,6 +18,7 @@ function App() {
         })
       }
       </div>
+      <Body />
     </div>
   );
 }
