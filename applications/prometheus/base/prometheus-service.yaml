@@ -9,8 +9,10 @@ metadata:
 spec:
   selector:
     app: prometheus-server
-  type: NodePort
   ports:
-    - port: 8080
+    - name: sidecar
+      port: 10901
+      targetPort: 10901
+    - name: prometheus
+      port: 8080
       targetPort: 9090
-      nodePort: 30000
