@@ -105,8 +105,8 @@ jobs:
 
     - name: Update Kubernetes resources
       run: |
-      cd applications/homepage/overlays/production
-      kustomize edit set image ghcr.io/thanos-io/thanos-community-website=ghcr.io/thanos-io/thanos-community-website:${{ env.VERSION }}
+        cd applications/homepage/overlays/production
+        kustomize edit set image ghcr.io/thanos-io/thanos-community-website=ghcr.io/thanos-io/thanos-community-website:${{ env.VERSION }}
 
     - name: Create Pull Request
       uses: peter-evans/create-pull-request@v3
