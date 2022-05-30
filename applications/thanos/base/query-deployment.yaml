@@ -19,6 +19,7 @@ spec:
         - query
         - --grpc-address=0.0.0.0:10901
         - --http-address=0.0.0.0:9090
+        - --endpoint=prometheus-service.monitoring.svc.cluster.local:10901
         image: quay.io/thanos/thanos
         imagePullPolicy: IfNotPresent
         name: thanos-query
