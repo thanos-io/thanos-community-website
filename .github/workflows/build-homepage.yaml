@@ -12,10 +12,12 @@ env:
 jobs:
   build-js:
     runs-on: ubuntu-latest
-    working-directory: ui/thanos-demo
     strategy:
       matrix:
         node-version: [15.x]
+    defaults:
+      run:
+        working-directory: ui/thanos-demo
     steps:
       - uses: actions/checkout@v3
       - name: Use Node.js ${{ matrix.node-version }}
@@ -27,13 +29,14 @@ jobs:
       - run: npm test
 
   build-and-push-image:
-    working-directory: ui/thanos-demo
     needs: [build-js]
     runs-on: ubuntu-latest
     permissions:
       contents: read
       packages: write
-
+    defaults:
+      run:
+        working-directory: ui/thanos-demo
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
