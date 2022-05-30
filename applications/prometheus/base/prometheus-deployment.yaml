@@ -22,6 +22,9 @@ spec:
             - "--storage.tsdb.retention.time=12h"
             - "--config.file=/etc/prometheus/prometheus.yml"
             - "--storage.tsdb.path=/prometheus/"
+            - "--storage.tsdb.max-block-duration=2h"
+            - "--storage.tsdb.min-block-duration=2h"
+            - "--web.enable-lifecycle"
           ports:
             - containerPort: 9090
           resources:
@@ -36,11 +39,21 @@ spec:
               mountPath: /etc/prometheus/
             - name: prometheus-storage-volume
               mountPath: /prometheus/
+        - name: thanos-sidecar
+          args:
+          - sidecar
+          - --prometheus.url=http://127.0.0.1:9090
+          ports:
+          - containerPort: 10901
+            name: grpc
+            protocol: TCP
+          volumeMounts:
+          - mountPath: /data
+            name: prometheus-storage-volume
       volumes:
         - name: prometheus-config-volume
           configMap:
             defaultMode: 420
             name: prometheus-server-conf
-
         - name: prometheus-storage-volume
           emptyDir: {}
