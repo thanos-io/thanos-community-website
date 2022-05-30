@@ -1,0 +1,19 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: thanos-demo
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: thanos-demo
+  template:
+    metadata:
+      labels:
+        app: thanos-demo
+    spec:
+      containers:
+      - name: thanos-demo
+        image: tend2infinity/thanos-demo
+        ports:
+        - containerPort: 80
