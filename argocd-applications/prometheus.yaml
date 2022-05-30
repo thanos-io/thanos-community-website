@@ -13,7 +13,7 @@ spec:
 
   # Source of the application manifests
   source:
-    repoURL: https://github.com/tend2infinity/thanos-community-website
+    repoURL: https://github.com/thanos-io/thanos-community-website
     targetRevision: main
     path: applications/prometheus/overlays/production
 
