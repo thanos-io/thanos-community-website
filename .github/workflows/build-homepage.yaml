@@ -68,10 +68,15 @@ jobs:
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
 
+      - name: Set variables
+        run: |
+          VER=$(cat VERSION)
+          echo "VERSION=$VER" >> $GITHUB_ENV
+
       - name: Build and push Docker image
         uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
         with:
           context: ui/thanos-demo
           push: true
-          tags: ${{ steps.meta.outputs.tags }}
+          tags: ghcr.io/thanos-io/thanos-community-website:${{ env.VERSION }}
           labels: ${{ steps.meta.outputs.labels }}
