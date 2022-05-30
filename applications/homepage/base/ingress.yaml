@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: thanos-demo
+  name: homepage
 spec:
   rules:
   - host: thanos-demo-website.d15ef0b9-5274-4557-9d1a-7969c3a28b75.lb.civo.com
@@ -11,7 +11,7 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: thanos-demo
+            name: homepage
             port:
               number: 80
   ingressClassName: nginx
