@@ -26,6 +26,12 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: npm ci
       - run: npm run build
+      - name: Cache build
+        id: build
+        uses: actions/cache@v3
+        with:
+          path: build
+          key: ${{ runner.os }}-build
 
   build-and-push-image:
     needs: [build-js]
@@ -39,6 +45,13 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+
+      - name: Cache build
+        id: build
+        uses: actions/cache@v3
+        with:
+          path: build
+          key: ${{ runner.os }}-build
 
       - name: Log in to the Container registry
         uses: docker/login-action@f054a8b539a109f9f41c372932f1ae047eff08c9
