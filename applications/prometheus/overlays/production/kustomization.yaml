@@ -8,3 +8,7 @@ images:
 - name: prom/prometheus
   newName: prom/prometheus
   newTag: v2.35.0
+
+- name: quay.io/thanos/thanos
+  newName: quay.io/thanos/thanos
+  newTag: v0.26.0

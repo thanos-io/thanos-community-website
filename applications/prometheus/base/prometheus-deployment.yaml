@@ -40,6 +40,7 @@ spec:
             - name: prometheus-storage-volume
               mountPath: /prometheus/
         - name: thanos-sidecar
+          image: quay.io/thanos/thanos:v0.26.0
           args:
           - sidecar
           - --prometheus.url=http://127.0.0.1:9090
