@@ -8,7 +8,9 @@ function Footer() {
             </div>
             <div style={{ backgroundColor: '#F5F5F5', display: 'flex', flexDirection: 'column', alignItems: 'center', padding: "2rem 1rem", flexBasis: '100%' }}>
                 <Typography variant="body">Powered By</Typography>
-                <img src="https://thanos.io/logos/civo.png" alt="Civo Logo" style={{ width: '25rem', marginBottom: '1rem' }} />
+                <a href="https://www.civo.com/">
+                    <img src="https://thanos.io/logos/civo.png" alt="Civo Logo" style={{ width: '25rem', marginBottom: '1rem' }} />
+                </a>
             </div>
         </div>
 
