@@ -7,4 +7,4 @@ bases:
 images:
 - name: prom/prometheus
   newName: prom/prometheus
-  newTag: v0.26.0
+  newTag: v2.35.0
