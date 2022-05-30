@@ -1,19 +1,19 @@
 kind: Deployment
 apiVersion: apps/v1
 metadata:
-  name: thanos-demo
+  name: homepage
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: thanos-demo
+      app: homepage
   template:
     metadata:
       labels:
-        app: thanos-demo
+        app: homepage
     spec:
       containers:
-      - name: thanos-demo
+      - name: homepage
         image: tend2infinity/thanos-demo:latest
         ports:
         - containerPort: 80
