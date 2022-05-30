@@ -3,9 +3,6 @@ import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import TwitterIcon from '@mui/icons-material/Twitter';
@@ -13,15 +10,6 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 
 
 export default function Navbar() {
-    const [anchorElNav, setAnchorElNav] = React.useState(null);
-
-    const handleOpenNavMenu = (event) => {
-        setAnchorElNav(event.currentTarget);
-    };
-
-    const handleCloseNavMenu = () => {
-        setAnchorElNav(null);
-    };
     return (
         <Box sx={{ flexGrow: 1 }}>
             <AppBar position="static" style={{ backgroundColor: '#6D41FF' }}>
