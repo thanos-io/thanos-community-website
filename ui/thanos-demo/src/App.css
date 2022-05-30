@@ -23,7 +23,7 @@ a:active {
 .collapse{
     display: flex;
     flex-wrap: wrap;
-    
+
 }
 .card{
     display: flex;
