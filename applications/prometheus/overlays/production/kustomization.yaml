@@ -1,0 +1,10 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+bases:
+- ../../base
+
+images:
+- name: prom/prometheus
+  newName: prom/prometheus
+  newTag: v0.26.0
