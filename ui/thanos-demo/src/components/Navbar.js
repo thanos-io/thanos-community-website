@@ -5,9 +5,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import { Link } from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import TwitterIcon from '@mui/icons-material/Twitter';
-
-
+import XIcon from '@mui/icons-material/X';
 
 export default function Navbar() {
     return (
@@ -34,11 +32,10 @@ export default function Navbar() {
                         </Link>
                         <Link style={{ marginRight: '1rem' }} href="https://twitter.com/ThanosMetrics">
                             <div style={{ display: 'flex', justifyContent: 'center' }}>
-                                <TwitterIcon style={{ color: 'white', marginRight: '0.3rem' }} />
+                                <XIcon style={{ color: 'white', marginRight: '0.3rem' }} />
                                 <Typography variant='h6' style={{ color: 'white' }}> Twitter </Typography>
                             </div>
                         </Link>
-
                     </div>
                 </Toolbar>
             </AppBar>
